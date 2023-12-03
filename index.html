@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- swiperjs cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+
+    <!-- google font link -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>PsychoArt</title>
+</head>
+
+<body>
+    <!-- header section starts -->
+    <header class="header bg-white10">
+        <div class="container">
+            <a href="#" class="logo bold white">Ecoads<span class="lightgreen">Marketplace</span></a>
+
+            <div class="menu">
+                <a href="#collections">Productos</a>
+                <!-- <div class="btn bg-purple wallet" id="connect">Seleccionar Wallet</div> -->
+                <div class="container">
+                    <!-- <button class="button" id="connectButton"> -->
+                      <!-- Connect wallet -->
+              
+                      <span id="loading">
+                       <!-- <span>&bull;</span><span>&bull;</span><span>&bull;</span>  -->
+                      </span>
+                    </button>
+              
+                    <!-- <div id="walletID">Your wallet is not connected yet.</div> -->
+              
+                   <div id="mobileDeviceWarning">
+                      <!-- If you are on a mobile phone, please use MetaMask  -->
+                      <!-- application's browser to connect. -->
+                   </div>
+               </div>
+               <title>MetaMask Button</title>
+               <button class="btn bg-purple wallet button" id="connectButton">MetaMask</button>
+
+               <h2>Cuenta: <span id="account"></span></h2>
+                <!-- <button class="enableEthereumButton">Enable Ethereum</button> -->
+  <!-- <h2>Account: <span class="showAccount"></span></h2> -->
+            </div>
+
+            <div class="fas fa-wallet" id="wallet"></div>
+            <div class="fas fa-bars" id="bar"></div>
+        </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+    <section id="home" class="spacetop15 spacebottom10">
+        <div class="container">
+            <div class="row jc-between ai-center col-reverse-s">
+                <div class="col5 col6-md col12-s ta-center-s">
+                    <h1 class="size5 bold spacebottom1">
+                        Crea, Compra & Colecciona Tu propio NFT
+                    </h1>
+                    <p class="size2 spacebottom3 halfwhite">Interactua en nuestros espacios .
+                        Crea tu 
+                    propia Coleccion.
+                    </p>
+
+                    <div class="row col8 col9-md jc-between spacebottom4 jc-evenly-s col12-s">
+                        <a href="#collections" class="btn bg-purple size2 white ">Explorar Ahora</a>
+                        <!-- <a href="#banner" class="btn bg-white10 size2 white ">Sell NFT</a> -->
+                    </div>
+
+                    <div class="row jc-between">
+                        <div class="ta-center">
+                            <p class="size3 bold">100k+</p>
+                            <p class="size2 halfwhite">Arte</p>
+                        </div>
+                        <div class="ta-center">
+                            <p class="size3 bold">872k+</p>
+                            <p class="size2 halfwhite">Espacios</p>
+                        </div>
+                        <div class="ta-center">
+                            <p class="size3 bold">11k+</p>
+                            <p class="size2 halfwhite">Clientes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col6 col12-s spacebottom3-s">
+                    <img src="img/collage.png" alt="" class="img-responsive float">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section ends -->
+
+    <!-- partner section starts -->
+    <section class="spacer5 spacer0-xs">
+        <div class="container row jc-between jc-around-md">
+            <img src="img/refi.png" alt="" class="height10 img-responsive-md">
+            <img src="img/push.png" alt="" class="height10 img-responsive-md">
+            <img src="img/Polygon.png" alt="" class="height10 img-responsive-md spacetop1-md">
+        </div>
+    </section>
+    <!-- partner section ends -->
+
+    <!-- about section starts -->
+    <section id="about" class="spacer10">
+        <div class="container">
+            <h1 class="bold size4 ta-center">Sobre Nosotros</h1>
+            <p class="spacebottom3 halfwhite size2 ta-center">
+                <br>
+            </p>
+            <div class="row ai-center jc-between flexcol-s">
+                <div class="col5 col10-s spacebottom2-s">
+                    <img src="img/refi3nft.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="col6 col12-s ta-center-s">
+                    <h3 class="size3 bold">Nuestro Lema</h3>
+                    <p class="size2 spacetop1 spacebottom3 halfwhite">La plataforma que permite a los anunciantes llegar a una audiencia compretida mediante la tokenizacion de espacios publicitarios
+                    </p>
+                    <a href="#collections" class="btn bg-purple size2 white">Explorar Mas</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- about section ends -->
+
+    <!-- collections section starts -->
+    <section class="collections spacer10" id="collections">
+        <div class="container">
+            <h1 class="bold size4 ta-center">Colecciones</h1>
+            <p class="spacebottom3 halfwhite size2 ta-center">
+                <!-- Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. -->
+            </p>
+            <div class="row spacebottom3 filter-buttons">
+                <div class="col3 filter col6-xs spacebottom1-xs" data-filter="all">Todos</div>
+                <div class="col3 filter col6-xs spacebottom1-xs" data-filter="art">Comestibles</div>
+                <div class="col3 filter col6-xs" data-filter="photograpy">Ecologicos</div>
+                <div class="col3 filter col6-xs" data-filter="pattern">Agricultura</div>
+            </div>
+            <div class="row box-card jc-evenly-md">
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="art">
+                    <img src="img/page.jpg" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                               
+                            </p>
+                            <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p> -->
+                            <!-- <h5 class="size2 bold">0.005ETH</h5> -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/pag2.jpg" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                               
+                            </p>
+                            <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p> -->
+                            <!-- <h5 class="size2 bold">0.005ETH</h5> -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="pattern">
+                    <img src="img/collection3.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                               
+                            </p>
+                            <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p> -->
+                            <!-- <h5 class="size2 bold">0.005ETH</h5>  -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+
+               
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection5.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                
+                            </p>
+                             <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p> -->
+                            <!-- <h5 class="size2 bold">0.005ETH</h5>  -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="pattern">
+                    <img src="img/collection6.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                               
+                            </p>
+                            <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p>
+                            <h5 class="size2 bold">0.005ETH</h5> -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="art">
+                    <img src="img/collection7.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                
+                            </p>
+                            <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p>
+                            <h5 class="size2 bold">0.005ETH</h5> -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="art">
+                    <img src="img/collection7.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                             
+                            </p>
+                            <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p>
+                            <h5 class="size2 bold">0.005ETH</h5> -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                
+                            </p>
+                            <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p>
+                            <h5 class="size2 bold">0.005ETH</h5> -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="pattern">
+                    <img src="img/collection9.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                              
+                            </p>
+                            <h5 class="size2 bold">Yellow Red</h5>
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p>
+                            <h5 class="size2 bold">0.005ETH</h5> -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">
+                        Conocer Mas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- collections section ends -->
+
+    <!-- featured section starts -->
+    <section class="featured spacer10" id="featured">
+        <div class="container">
+            <h1 class="bold size4 ta-center">Nuestro Equipo</h1>
+            <!-- <p class="spacebottom3 halfwhite size2 ta-center">
+                Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.
+            </p> -->
+            <div class="swiper card-slider row">
+                <div class="swiper-wrapper">
+                    <div class="col4 col5-md col7-s swiper-slide">
+                        <div class="card bg-white10">
+                            <img src="img/1.png" class="img-responsive" alt="">
+                            <div class="row jc-between spacetop2">
+                                <div>
+                                    <p class="size2 halfwhite">
+                                      
+                                    </p>
+                                    <!-- <h5 class="size2 bold">Yellow Red</h5> -->
+                                </div>
+                                <div>
+                                    <!-- <p class="current halfwhite">Current bid</p>
+                                    <h5 class="size2 bold">0.005ETH</h5> -->
+                                </div>
+                            </div>
+                            <a class="bid size2 ta-center">
+                                Conocer Mas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col4 col5-md col7-s swiper-slide">
+                        <div class="card bg-white10">
+                            <img src="img/2.png" class="img-responsive" alt="">
+                            <div class="row jc-between spacetop2">
+                                <div>
+                                    <p class="size2 halfwhite">
+                                       
+                                    </p>
+                                    <h5 class="size2 bold"></h5>
+                                </div>
+                                <div>
+                                    <!-- <p class="current halfwhite">Current bid</p>
+                                    <h5 class="size2 bold">0.005ETH</h5> -->
+                                </div>
+                            </div>
+                            <a class="bid size2 ta-center">
+                                Conocer Mas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col4 col5-md col7-s swiper-slide">
+                        <div class="card bg-white10">
+                            <img src="img/3.png" class="img-responsive" alt="">
+                            <div class="row jc-between spacetop2">
+                                <div>
+                                    <p class="size2 halfwhite">
+                                    
+                                    </p>
+                                    <h5 class="size2 bold"></h5>
+                                </div>
+                                <div>
+                                    <!-- <p class="current halfwhite">Current bid</p>
+                                    <h5 class="size2 bold">0.005ETH</h5> -->
+                                </div>
+                            </div>
+                            <a class="bid size2 ta-center">
+                                Conocer Mas
+                            </a>
+                        </div>
+                    </div>
+                     <div class="col4 col5-md col7-s swiper-slide">
+                        <div class="card bg-white10">
+                            <img src="img/5.png" class="img-responsive" alt="">
+                            <div class="row jc-between spacetop2">
+                                <div>
+                                    <p class="size2 halfwhite">
+                                      
+                                    </p>
+                                    <h5 class="size2 bold"></h5>
+                                </div>
+                                <div>
+                                    <!-- <p class="current halfwhite">Current bid</p>
+                                    <h5 class="size2 bold">0.005ETH</h5> -->
+                                </div>
+                            </div>
+                            <a class="bid size2 ta-center">
+                                Conocer Mas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col4 col5-md col7-s swiper-slide">
+                        <div class="card bg-white10">
+                            <img src="img/4.png" class="img-responsive" alt="">
+                            <div class="row jc-between spacetop2">
+                                <div>
+                                    <p class="size2 halfwhite">
+                                    
+                                    </p>
+                                    <h5 class="size2 bold"></h5>
+                                </div>
+                                <div>
+                                    <!-- <p class="current halfwhite">Current bid</p>
+                                    <h5 class="size2 bold">0.005ETH</h5> -->
+                                </div>
+                            </div>
+                            <a class="bid size2 ta-center">
+                                Conocer Mas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col4 col5-md col7-s swiper-slide">
+                        <div class="card bg-white10">
+                            <img src="img/6.png" class="img-responsive" alt="">
+                            <div class="row jc-between spacetop2">
+                                <div>
+                                    <p class="size2 halfwhite">
+                                       
+                                    </p>
+                                    <h5 class="size2 bold"></h5>
+                                </div>
+                                <div>
+                                    <!-- <p class="current halfwhite">Current bid</p>
+                                    <h5 class="size2 bold">0.005ETH</h5> -->
+                                </div>
+                            </div>
+                            <a class="bid size2 ta-center">
+                                Conocer Mas
+                            </a>
+                        </div>
+                    </div>
+                   
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- featured section ends -->
+
+    <!-- creator section starts -->
+    <!-- <section class="creator spacer10" id="featured">
+        <div class="container"> -->
+            <!-- <h1 class="bold size4 ta-center">Top Creator</h1> -->
+            <!-- <p class="spacebottom3 halfwhite size2 ta-center"> -->
+                <!-- Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. -->
+            <!-- </p> -->
+            <!-- <div class="swiper row creator-slider"> -->
+                <!-- <div class="swiper-wrapper"> -->
+                    <!-- <div class="col4 col5-md col7-s swiper-slide"> -->
+                        <!-- <div class="card-creator bg-white10 ta-center">
+                            <img src="img/creator1.png" class="img-responsive" alt="">
+                            <img src="img/photo1.png" class="photo" alt="">
+                            <h5 class="spacer1 size2 bold">John Wick</h5>
+                            <p class="spacebottom2 halfwhite desc">Lorem ipsum dolor sit amet,
+                                consectetur<br>adipiscing
+                                elit.</p>
+                            <button class="follow ta-center bg-purple white">+ Follow</button>
+                        </div> -->
+                    <!-- </div>
+                    <div class="col4 col5-md col7-s swiper-slide">
+                        <div class="card-creator bg-white10 ta-center">
+                            <img src="img/creator2.png" class="img-responsive" alt="">
+                            <img src="img/photo2.png" class="photo" alt="">
+                            <h5 class="spacer1 size2 bold">John Wick</h5>
+                            <p class="spacebottom2 halfwhite desc">Lorem ipsum dolor sit amet,
+                                consectetur<br>adipiscing
+                                elit.</p>
+                            <button class="follow ta-center bg-purple white">+ Follow</button>
+                        </div>
+                    </div>
+                    <div class="col4 col5-md col7-s swiper-slide">
+                        <div class="card-creator bg-white10 ta-center">
+                            <img src="img/creator3.png" class="img-responsive" alt="">
+                            <img src="img/photo3.png" class="photo" alt="">
+                            <h5 class="spacer1 size2 bold">John Wick</h5>
+                            <p class="spacebottom2 halfwhite desc">Lorem ipsum dolor sit amet,
+                                consectetur<br>adipiscing
+                                elit.</p>
+                            <button class="follow ta-center bg-purple white">+ Follow</button> -->
+                        <!-- </div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- creator section ends -->
+
+    <!-- FAQ section starts -->
+    <!-- <section class="spacer10" id="faq">
+        <div class="container">
+            <h1 class="bold size4 ta-center">Formulario Contrato<br></h1>
+            <p class="spacebottom3 halfwhite size2 ta-center"> -->
+                <!-- Wanna Ask Something? -->
+            </p>
+            <!-- <div class="row jc-between">
+                <div class="box-faq col6 col12-s">
+                    <div class="box spacebottom5">
+                        <div class="title row jc-between">
+                            <h3 class="size2 halfwhite">Nombre</h3>
+                            <i class="fas fa-angle-down size2 halfwhite"></i>
+                        </div>
+                       <p class="answer size2 spacetop1 "> 
+                    </div>
+                    <div class="box spacebottom5">
+                        <div class="title row jc-between">
+                            <h3 class="size2 halfwhite">Lorem ipsum ipsum?</h3>
+                            <i class="fas fa-angle-down size2 halfwhite"></i>
+                        </div>
+                        <p class="answer size2 spacetop1 "></p>
+                    </div>
+                    <div class="box spacebottom5">
+                        <div class="title row jc-between">
+                            <h3 class="size2 halfwhite">Lorem ipsum ipsum?</h3>
+                            <i class="fas fa-angle-down size2 halfwhite"></i>
+                        </div>
+                        <p class="answer size2 spacetop1 "><title>Formulario NFT</title>
+                        </head>
+                        <body class="bg-image">
+                        <div class="container bg-white10">
+                          <h2>Formulario de Creación de NFT</h2>
+                          <form>
+                            <label for="nftName">Nombre del NFT:</label><br>
+                            <input type="text" id="nftName" name="nftName"><br>
+                            <label for="nftDescription">Descripción del NFT:</label><br>
+                            <input type="text" id="nftDescription" name="nftDescription"><br>
+                            <label for="nftImage">Imagen del NFT:</label><br>
+                            <input type="file" id="nftImage" name="nftImage"><br>
+                            <button type="submit">Crear NFT</button>
+                          </form></p>
+                    </div>
+                </div>
+                <div class="box-faq col6 col12-s">
+                    <div class="box spacebottom5">
+                        <div class="title row jc-between">
+                            <h3 class="size2 halfwhite">Lorem ipsum ipsum?</h3>
+                            <i class="fas fa-angle-down size2 halfwhite"></i>
+                        </div>
+                        <p class="answer size2 spacetop1 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates
+                            ratione ea officiis ad quam blanditiis, dignissimos adipisci suscipit nobis temporibus
+                            molestias fugiat quas possimus assumenda quod quae modi dolorem sed.</p>
+                    </div>
+                    <div class="box spacebottom5">
+                        <div class="title row jc-between">
+                            <h3 class="size2 halfwhite">Lorem ipsum ipsum?</h3>
+                            <i class="fas fa-angle-down size2 halfwhite"></i>
+                        </div>
+                        <p class="answer size2 spacetop1 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates
+                            ratione ea officiis ad quam blanditiis, dignissimos adipisci suscipit nobis temporibus
+                            molestias fugiat quas possimus assumenda quod quae modi dolorem sed.</p>
+                    </div>
+                    <div class="box spacebottom5">
+                        <div class="title row jc-between">
+                            <h3 class="size2 halfwhite">Lorem ipsum ipsum?</h3>
+                            <i class="fas fa-angle-down size2 halfwhite"></i>
+                        </div>
+                        <p class="answer size2 spacetop1 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates
+                            ratione ea officiis ad quam blanditiis, dignissimos adipisci suscipit nobis temporibus
+                            molestias fugiat quas possimus assumenda quod quae modi dolorem sed.</p> -->
+                    <!-- </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+            <!-- collections section starts -->
+    <section class="collections spacer10" id="collections">
+        <div class="container">
+            <h1 class="bold size4 ta-center">Nuestros Paquetes</h1>
+            <p class="spacebottom3 halfwhite size2 ta-center">
+                <!-- Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. -->
+            </p>
+      
+            <div class="row box-card jc-evenly-md">
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="art">
+                    <img src="img/un_mes.jpeg" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                               
+                            </p>
+                            <!-- <h5 class="size2 bold">Yellow Red</h5> -->
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p> -->
+                            <!-- <h5 class="size2 bold">0.005ETH</h5> -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">Comprar Ahora</a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/anual.jpeg" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                               
+                            </p>
+                             <!-- <h5 class="size2 bold">Yellow Red</h5> -->
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p> -->
+                            <!-- <h5 class="size2 bold">0.005ETH</h5>  -->
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">Comprar Ahora</a>
+                </div>
+
+                      <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/seis_meses.jpeg" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                               
+                            </p>
+                             <!-- <h5 class="size2 bold">Yellow Red</h5> -->
+                        </div>
+                        <div>
+                            <!-- <p class="current halfwhite">Current bid</p> -->
+                            <!-- <h5 class="size2 bold">0.005ETH</h5> --> 
+                        </div>
+                    </div>
+                    <a class="bid size2 ta-center">Comprar Ahora</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+         
+     
+    <!-- FAQ section ends -->
+
+    <!-- banner section starts -->
+    <!-- <section class="spacer10" id="banner">
+        <div class="container spacer5 bg-purple ta-center">
+            <h1 class="size5 bold spacebottom2 size4-xs">Get ready to collect<br>our NFT</h1>
+            <a class="btn bg-halfwhite size2 started ">Get started</a>
+        </div>
+    </section> -->
+    <!-- banner section ends -->
+
+    <!-- footer section starts -->
+    <footer class="spacer10">
+        <div class="container row jc-between flexcol-s ta-center-s">
+            <div class="row flexcol spacebottom3-s">
+                <a href="#home" class="size2 bold white">Ecoads<span class="lightgreen">Marketplace</span></a>
+                <p class="size2 halfwhite spacetop2">El mejor NFT marketplace sitioweb en<br>el mundo con la mejor
+                    experiencia
+                    <br></p>
+            </div>
+            <div class="row flexcol spacebottom3-s">
+                <a href="#about" class="bold size2 white">Sobre Nosotros</a>
+                <a href="#" class="size2 halfwhite spacetop2">Nosotros</a>
+                <a href="#" class="size2 halfwhite spacetop2">Productos</a>
+                <a href="#" class="size2 halfwhite spacetop2">Equipo</a>
+                <!-- <a href="#" class="size2 halfwhite spacetop2">FAQ</a> -->
+            </div>
+            <!-- <div class="row flexcol spacebottom3-s">
+                <a href="#" class="bold size2 white">Equipo</a>
+                <a href="#" class="size2 halfwhite spacetop2">Our Team</a>
+                <a href="#" class="size2 halfwhite spacetop2">Partner With Us</a>
+                <a href="#" class="size2 halfwhite spacetop2">Privacy & Policy</a>
+                <a href="#" class="size2 halfwhite spacetop2">Features</a> -->
+            <!-- </div> -->
+            <div class="row flexcol spacebottom3-s">
+                <h5 class="bold size2">Contact</h5>
+                <a href="#" class="size2 halfwhite spacetop2">+57 3212426036</a>
+                <a href="#" class="size2 halfwhite spacetop2">ecoadsmarketplace@gmail.com</a>
+                <div class="row jc-between spacetop2 jc-evenly-s">
+                    <a href="#" class="fab fa-youtube size2 halfwhite spacetop2"></a>
+                    <a href="#" class="fab fa-discord size2 halfwhite spacetop2"></a>
+                    <a href="#" class="fab fa-instagram size2 halfwhite spacetop2"></a>
+                </div>
+            </div>
+        </div>
+        <!-- <p class="size2 halfwhite spacetop5 ta-center">Created by <span class="white bold">Zarror</span> | All Right -->
+            <!-- Reserved!</p> -->
+    </footer>
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- custom js file link -->
+    <script src="js/metamask.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+</body>
+
+</html>
