@@ -1,0 +1,56 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+import './EcoAdsCollection.sol';
+
+contract EcoAds {
+	address public EAMAdress;
+	uint256 public collectionIdCounter = 0;
+	uint256 public price = 9 ether;
+
+	mapping(uint256 => EcoAdsCollection) collections;
+
+	constructor(address _EAMAdress) {
+		EAMAdress = _EAMAdress;
+	}
+
+	function createNFTCollection(
+		string calldata _name,
+		string calldata _symbol,
+		string[] memory _tokenURIs
+	) public payable {
+		require(msg.value >= price, 'Insufficient funds');
+
+		EcoAdsCollection collection = new EcoAdsCollection(
+			_name,
+			_symbol,
+			_tokenURIs,
+			EAMAdress
+		);
+
+		collectionIdCounter++;
+		collections[collectionIdCounter] = collection;
+	}
+
+	function withdraw() public {
+		require(msg.sender == EAMAdress, 'Only EAM can withdraw funds');
+
+		(bool response, ) = EAMAdress.call{value: getBalance()}('');
+		require(response, 'Transfer failed');
+	}
+
+	function getBalance() public view returns (uint256) {
+		return address(this).balance;
+
+
+
+
+
+	}
+}
+
+..............................................................
+
+Metadata
+
+["https://gateway.lighthouse.storage/ipfs/QmeK2xpeb1n5EAQnmhuKS95VgmFmY15HZuGLrT7a1Zkw5M","https://gateway.lighthouse.storage/ipfs/QmeK2xpeb1n5EAQnmhuKS95VgmFmY15HZuGLrT7a1Zkw5M","https://gateway.lighthouse.storage/ipfs/QmeK2xpeb1n5EAQnmhuKS95VgmFmY15HZuGLrT7a1Zkw5M","https://gateway.lighthouse.storage/ipfs/QmeK2xpeb1n5EAQnmhuKS95VgmFmY15HZuGLrT7a1Zkw5M","https://gateway.lighthouse.storage/ipfs/QmeK2xpeb1n5EAQnmhuKS95VgmFmY15HZuGLrT7a1Zkw5M"]
